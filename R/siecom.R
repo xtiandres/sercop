@@ -334,3 +334,5 @@ ips_l <- full_join(ips_k, ips25_t, by = 'estado_del_proceso')
 ips_m <- full_join(ips_l, ips26_t, by = 'estado_del_proceso')
 ips_n <- full_join(ips_m, ips27_t, by = 'estado_del_proceso')
 
+x <- select(ips_n, `I19-0`)
+x <- filter(x, estado == 'Adjudicado - Registro de Contratos')
