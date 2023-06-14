@@ -30,6 +30,32 @@ dsie1206 <- read_csv("/home/xut/Documents/udaviz/R/studio/sercop/data/SIE_120620
 dgpe1206 <- read_csv("/home/xut/Documents/udaviz/R/studio/sercop/data/GPE_12062023.csv")
 dgep1206 <- read_csv("/home/xut/Documents/udaviz/R/studio/sercop/data/GEP_12062023.csv")
 
+dt130623 <- read_csv("/home/xut/Documents/udaviz/R/studio/sercop/data/utotal.csv")
+xsie_t20 <- filter(dt130623,
+                   tipo_de_contratacion == 'Subasta Inversa Electrónica' &
+                     fecha_publicacion >= as.Date('2020-01-01') &
+                     fecha_publicacion <= as.Date('2020-12-31'))
+xsie_t21 <- filter(dt130623,
+                   tipo_de_contratacion == 'Subasta Inversa Electrónica' &
+                     fecha_publicacion >= as.Date('2021-01-01') &
+                     fecha_publicacion <= as.Date('2021-12-31'))
+xsie_t22 <- filter(dt130623,
+                   tipo_de_contratacion == 'Subasta Inversa Electrónica' &
+                     fecha_publicacion >= as.Date('2022-01-01') &
+                     fecha_publicacion <= as.Date('2022-12-31'))
+xgpe_t20 <- filter(dt130623,
+                   tipo_de_contratacion == 'Publicación Especial' &
+                     fecha_publicacion >= as.Date('2020-01-01') &
+                     fecha_publicacion <= as.Date('2020-12-31'))
+xgpe_t21 <- filter(dt130623,
+                   tipo_de_contratacion == 'Publicación Especial' &
+                     fecha_publicacion >= as.Date('2021-01-01') &
+                     fecha_publicacion <= as.Date('2021-12-31'))
+xgpe_t22 <- filter(dt130623,
+                   tipo_de_contratacion == 'Publicación Especial' &
+                     fecha_publicacion >= as.Date('2022-01-01') &
+                     fecha_publicacion <= as.Date('2022-12-31'))
+
 # FILTROS SIE POWER BI
 # 2020
 f20_sie <- dpb2020 %>%
